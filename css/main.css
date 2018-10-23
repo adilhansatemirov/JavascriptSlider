@@ -1,0 +1,135 @@
+/* SPECIFICATIONS */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, a, img, input,svg {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    margin: 0 auto;
+}
+/* **************************************************** */
+/*                      MAIN PART                       */
+/* **************************************************** */
+.slideshow-container{
+    width: 43rem;
+    height: 28rem;
+    background: #eee;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2rem;
+}
+.slides{
+    display: none;
+}
+.number{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+    background: rgba(0, 0, 0,0.5);
+    padding: 0.5rem;
+}
+.text{
+    position: absolute;
+    bottom: 4.5rem;
+    left: 1rem;
+    color: #fff;
+    background: rgba(0, 0, 0,0.5);
+    padding: 0.5rem;
+}
+img{
+    margin: 0 auto;
+    width: 43rem;
+    object-fit: cover;
+}
+.arrow{
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -1.5rem;
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem;
+}
+.arrow:hover{
+    background: #000;
+    cursor: pointer;
+}
+.prev{
+    left: 0rem;
+}
+.next{
+    right: 0rem;
+}
+.dots{
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.dot{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #999;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 1rem;
+    padding-top: 0.2rem;
+    padding: 0.2 0.1 0.1 0.1;
+}
+.active, .dot:hover{
+    background: rgb(0, 0, 0,0.1);
+}
+.buttons-holder{
+    margin: 1rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.buttons-holder div{
+    padding: 0.6rem 0.8rem;
+    background: #eee;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.buttons-holder .active-button{
+    background: rgb(0, 0, 0,0.2);
+}
+
+/* ANIMATIONS */
+.fade{
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+.move{
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes move{
+    0% {width: 30rem};
+    100% {width: 43rem};
+}
